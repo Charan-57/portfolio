@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naga Charan Medoji</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- AOS Animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+:root{
+--bg:#f5f7fb;
+--card:#fff;
+--text:#222;
+--accent:#1a73e8;
+}
+
+body.dark{
+--bg:#0f172a;
+--card:#1e293b;
+--text:#e5e7eb;
+}
+
+body{
+margin:0;
+font-family:Inter,sans-serif;
+background:var(--bg);
+color:var(--text);
+transition:.3s;
+}
+
+.container{max-width:1000px;margin:auto;padding:30px}
+
+.hero{
+background:linear-gradient(135deg,#1a73e8,#4285f4);
+color:white;
+padding:50px;
+border-radius:18px;
+position:relative;
+}
+
+.toggle{
+position:absolute;
+top:20px;
+right:20px;
+background:white;
+border:none;
+padding:8px 14px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.section{margin-top:40px}
+
+.section h2{
+border-left:5px solid var(--accent);
+padding-left:10px;
+}
+
+.card{
+background:var(--card);
+padding:20px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+margin-top:15px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.chip{
+display:inline-block;
+background:#e8f0fe;
+padding:6px 12px;
+border-radius:20px;
+margin:6px;
+font-size:14px;
+}
+
+.project img{
+width:100%;
+border-radius:12px;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#1a73e8;
+color:white;
+border-radius:25px;
+text-decoration:none;
+}
+
+.footer{text-align:center;margin:60px 0;opacity:.6}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero" data-aos="fade-down">
+<button class="toggle" onclick="toggle()">🌙</button>
+<h1>Naga Charan Medoji</h1>
+<p>AI + Web Developer • Hyderabad</p>
+<p>📞 9640441816 • ✉️ nagacharanmedoji@gmail.com</p>
+
+<a class="btn" href="resume.pdf" download>Download Resume</a>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section" data-aos="fade-up">
+<h2>Experience</h2>
+
+<div class="card">
+<b>AI & Web Intern — EDVEDHA</b>
+<ul>
+<li>Built AI features in Python</li>
+<li>API integrations</li>
+</ul>
+</div>
+
+<div class="card">
+<b>Frontend Intern — Virtunexa</b>
+<ul>
+<li>React responsive UI</li>
+</ul>
+</div>
+
+<div class="card">
+<b>AI/ML Intern — Infosys Springboard</b>
+<ul>
+<li>Health diagnostics pipeline</li>
+</ul>
+</div>
+</div>
+
+<!-- PROJECT -->
+<div class="section" data-aos="zoom-in">
+<h2>Featured Project</h2>
+
+<div class="card project">
+<b>AI Image Captioning</b>
+<img src="https://images.unsplash.com/photo-1526378722443-4a9ecf77b99f" alt="">
+<ul>
+<li>LSTM neural network</li>
+<li>90% accuracy</li>
+<li>HTML/CSS demo UI</li>
+</ul>
+</div>
+</div>
+
+<!-- SKILLS -->
+<div class="section" data-aos="fade-up">
+<h2>Skills</h2>
+
+<div class="card">
+<span class="chip">Python</span>
+<span class="chip">React</span>
+<span class="chip">JavaScript</span>
+<span class="chip">HTML/CSS</span>
+<span class="chip">Machine Learning</span>
+<span class="chip">AI</span>
+<span class="chip">Cybersecurity</span>
+</div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section" data-aos="fade-up">
+<h2>Education</h2>
+
+<div class="card">B.Tech ECE — Malla Reddy Institute (2022–Present)</div>
+<div class="card">Intermediate — Sri Chaitanya</div>
+</div>
+
+<!-- CERTS -->
+<div class="section" data-aos="fade-up">
+<h2>Certifications</h2>
+
+<div class="grid">
+<div class="card">AI with Python</div>
+<div class="card">Frontend React</div>
+<div class="card">JPMorgan Forage</div>
+<div class="card">Tata Cybersecurity</div>
+</div>
+</div>
+
+<div class="footer">Built with caffeine + discipline ☕</div>
+
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+
+function toggle(){
+document.body.classList.toggle("dark");
+localStorage.theme=document.body.classList.contains("dark");
+}
+
+if(localStorage.theme==="true"){
+document.body.classList.add("dark");
+}
+</script>
+
+</body>
+</html>
